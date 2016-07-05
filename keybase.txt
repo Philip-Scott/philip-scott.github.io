@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/philip_scott
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://philip-scott.github.io
+  * I am philip_scott (https://keybase.io/philip_scott) on keybase.
+  * I have a public key with fingerprint 809C 189F A470 3B53 1F30  B934 44DA 89C1 AE95 857F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101c0e072527012190f60a355e32a1894205aaa81cc5719ba50aff37d4dc14b04d90a",
+            "fingerprint": "809c189fa4703b531f30b93444da89c1ae95857f",
+            "host": "keybase.io",
+            "key_id": "44da89c1ae95857f",
+            "kid": "0101c0e072527012190f60a355e32a1894205aaa81cc5719ba50aff37d4dc14b04d90a",
+            "uid": "324214893bc5cb15e33d3f1424336819",
+            "username": "philip_scott"
+        },
+        "revoke": {
+            "sig_ids": [
+                "c5c2d6ef7e384649e01f1e3e5b9407c10477324c5ecbdd2d5283ceb1443137e20f"
+            ]
+        },
+        "service": {
+            "hostname": "philip-scott.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1467747573,
+    "expire_in": 157680000,
+    "prev": "e38fed391bdbf209d17fc2d46c82d3e3ccf635c065d92131a75fbe1964e353b4",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.53
+Comment: https://keybase.io/crypto
+
+yMJzAnicrZJvaFZVHMefZ2mzJ80pSSxE6Rj5wmfjnHvOuefex0SSDHthiG+iP/Zw
+/u657fHeZ/feZzrdCpYFzjJWydCQtgyyCN9EKwJh6HwxFuI2mBJEEBUx54aCghTZ
+uU/1QvCl583h3Pv9fn7f3++c8RUP5Ar5OwdmPxswb1/PT57L13Mv9i6/eRCISPWA
+0kHQqRubriqdpOXOQIESgAgiCTVkDnUYRA7yoXEhx5Rq7HDk+cSBlHPuISkpQ77g
+FHJjMFNESUQEJMqHHBSBCcIOHdfiIEwt1oO+tGbDCYNYUIwMhsLHhBDFPfuLa596
+lBlrrERJ5rDhBE90exDZb/ZQbsS7h/4+5643cNghDiKej4WkUiALwQobRByCsesh
+PxMmOg75Xm3VtUpQDWrlREZpCvqKINbdUafOZpsEHTZ4AkqvAAtylKsN09gjLvE1
+RAZprKnwCWQSQcKYLSuplkIpR1HHw1ILRAhGmGkHGrDHsm3V7kA24Nmk7krQ1kjQ
+3hGklbr4d3K1OEojGVWtppKmtaSU5Ut7aplpnxbl/3BlEYTK3ph1dOs4CaIQlJBV
+yjTI+Ii4jBFGGS4Cvb8WxLocZArKXA/aldXR3RZpezNaYR8JJYwDfYWYsW0TV3qO
+whpLaVxMJXSp8h2EEWfUCI18l2hMsSAga7ArjECJ2Ji8wyLtCEOe1mMN+s6Nvbok
+ly/kHlzalL3kXOGhlv/fdxo23+kpz654ZPXakfypmd7PXxu99sw74cTJPfn3P72R
+WyZ2zCwe/WrzrUODv3w8+NObA8OHxvqXTV74ZOes6Ft5bPfCksv8LH8pPrNqyL25
+fWxiqtjb/ljPabnx5KpLW+aHfu5v/0gU5r88DKePHL1UnOOjTYer09/D39/r/84Z
+Gbz4V0tu7/CJ+pn8G3M/gj926NPrm09sfTy/O57btPL4B96uW6/f7n/21/G3Ljyl
+Nj031bVwdtfW8pWXF5tPrevadqz168UNl9PJ5qevPvnNw982zbcu/IaGWq78Xbg2
+PiNGhlY/sX30hbaLg+9+WD0/9cMXlenja9jzG+cmdt6G21oHFh9d+JNuOL90GG1u
++wdGzGEH
+=Tm6N
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/philip_scott
+
+==================================================================
