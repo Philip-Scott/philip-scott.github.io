@@ -7,12 +7,26 @@
     <title>Felipe Escoto</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="/assets/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/assets/js/carrusel.js"></script>
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/main.css" />
 </head>
 <body>
     <header class="paralax" id="sidebar">
-        <img class="avatar" src="images/profile.jpg"/>
-        <p> <b>Felipe Escoto</b><br> Software engineer, and elementary developer </p>
+        <img class="avatar" src="images/profile.jpg"/><div>
+        <b>I am Felipe Escoto</b>
+        </div><div>a
+        <ul id="carousel">
+            <li class="carouselI">Software Engineer</li>
+            <li class="carouselI">Wizeline Engineer</li>
+            <li class="carouselI">App Developer</li>
+        </ul></div>
+        <script>
+            $(document).ready(function() {
+                $('#carousel').carousel("carousel");
+            });
+        </script>
     </header>
 
     <div id="main">
@@ -21,7 +35,8 @@
             <h1> About me </h1>
             <p> Hello! My name is Felipe Escoto, I am a 20 years old Software Engineer student, developer and Linux lover. This website mainly serves as a portfolio of the Open Source projects I’ve contributed to, or the ones I've created myself.   </p>
         </section> 
-
+        
+        
         <!-- My projects -->
         <section id="projects">
             <h2> Projects I've Worked On:</h2>

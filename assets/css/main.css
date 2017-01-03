@@ -11,6 +11,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 		vertical-align: baseline;
 	}
 
+/* Carrousel */
+#carousel {
+    margin: 0.5em 1.5em 0.8em 0.1em;
+    display: inline-block;
+}
+
+.carouselI {
+    position: absolute;
+    visibility: hidden;
+}
+
+.carouselI.animated {
+    visibility: visible;
+    display: inline-block;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -72,6 +88,7 @@ p, .caption {
 
 /*Sidebar */
 #sidebar {
+    font-family: Noto Sans;
     float: left;
     position: fixed;
     max-width: 35%;
@@ -83,12 +100,16 @@ p, .caption {
     box-shadow: 0px 0px 5px #666;
 }
 
-#sidebar p {
+#sidebar div {
     font-size: 1.5em;
-    margin: 3em 1.5em 1em 4em;
+    margin: 0.5em 1.5em 1em 4em;
     text-shadow: 1px 0px 1px #000;
-    text-align: right;
+    text-align: left;
     color: white;
+}
+
+#sidebar > #carousel {
+    
 }
 
 #sidebar b {
@@ -97,7 +118,7 @@ p, .caption {
 }
 
 @media screen and (max-width: 1200px) {
-    #sidebar p {
+    #sidebar div {
         font-size: 1.3em;
     }
 }
@@ -110,7 +131,7 @@ p, .caption {
         height: 100%;
     }
 
-    #sidebar p {
+    #sidebar div {
         padding: 3em 1em 0 1em;
         margin: 0 1em 1em 0;
     }
