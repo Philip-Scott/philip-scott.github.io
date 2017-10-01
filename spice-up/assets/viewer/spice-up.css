@@ -14,10 +14,20 @@ body {
   background-color: lightgray;
   position: relative;
   overflow: hidden;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .canvas-item {
   position: absolute;
-  display: inline-block;
-  text-align: center;
+  display: flex;
+}
+
+text-item {
+  white-space: pre-wrap;
+}
+
+text-item span {
+  align-self: center;
 }
