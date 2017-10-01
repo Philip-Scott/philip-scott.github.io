@@ -1,36 +1,32 @@
 // depends on libphilip.js
 
-var _window = `
+var SLIDES = `
   <div class="slides">
 		{0}
 	</div>
 `;
 
+var SLIDE_STYLE = "background: {1}, {0};";
 var SLIDE = `
   <div class="slide" style='{1}'>
     {0}
   </div>
 `;
 
-var SLIDE_STYLE = "background: {0};";
-
-var text_item = `
+var TEXT_STYLE = "color: {0}; font-family: {1}; font-size: {2}px; {3}; justify-content: {4}; text-align: {5}; font-weight: {6}";
+var TEXT_ITEM = `
   <text-item class="canvas-item" style="{1}"><span>{0}</span></text-item>
 `
 
-var TEXT_STYLE = "color: {0}; font-family: {1}; font-size: {2}px; {3}; justify-content: {4}; text-align: {5}";
-
-var color_item = `
+var COLOR_STYLE = "background: {0}; {1}";
+var COLOR_ITEM = `
   <color-item class="canvas-item" style="{0}"></color-item>
 `
 
-var COLOR_STYLE = "background: {0}; {1}";
-
-var image_item = `
+var IMAGE_STYLE = "background: url(data:image/{1};base64,{0}) no-repeat center; background-size: contain; {2}";
+var IMAGE_ITEM = `
   <image-item class="canvas-item" style="{0}"></image-item>
 `
-var IMAGE_STYLE = "background: url(data:image/{1};base64,{0}) no-repeat center; background-size: contain; {2}";
-
 
 MAX_WIDTH = 2140 + 611;
 MAX_HEIGHT = 1532 + 12;
@@ -51,17 +47,12 @@ function getPosition (item) {
 
 // Formats for the ROW and HEADER for the table
 function get (id) {
-  // console.log (String.format ("Getting: {0}", id));
   return document.getElementById(id);
 }
 
 function renderSlides (file) {
-  $('link[rel=stylesheet][href~="assets/css/main.css"]').remove();
-
-  // generate a new FileReader object
   reader = new FileReader();
 
-  // inject an image with the src url
   reader.onload = function(event) {
     let root_object = JSON.parse (event.target.result);
     console.log (root_object);
@@ -88,37 +79,57 @@ function renderSlides (file) {
               case 3: justification = "center"; text_align = "justify"; break;
             }
 
-            style = String.build (TEXT_STYLE, item["color"], item["font"], item["font-size"] * 3.8, pos, justification, text_align);
-            slide_content += String.build (text_item, text, style);
+            let font_style = item["font-style"];
+            if (font_style.indexOf("italic") != -1) {
+              font_style = font_style.replace(" italic", "");
+            }
+
+            switch (font_style) {
+              case "black": font_style = "900"; break;
+              case "extrabold": font_style = "800"; break;
+              case "semibold": font_style = "600"; break;
+              case "bold": font_style = "700"; break;
+              case "medium": font_style = "500"; break;
+              case "regular": font_style = "400"; break;
+              case "extralight": font_style = "300"; break;
+              case "light": font_style = "200"; break;
+              case "thin": font_style = "100"; break;
+            }
+
+            style = String.build (TEXT_STYLE, item["color"], item["font"], item["font-size"] * 3.8, pos, justification, text_align, font_style);
+            slide_content += String.build (TEXT_ITEM, text, style);
             break;
           case "color":
-            let styled = String.build (COLOR_STYLE, item["background_color"], pos);
-            slide_content += String.build (color_item, styled);
+            style = String.build (COLOR_STYLE, item["background_color"], pos);
+            slide_content += String.build (COLOR_ITEM, style);
+            break
           case "image":
             style = String.build (IMAGE_STYLE, item["image-data"], item["image"], pos);
-            slide_content += String.build (image_item, style);
-
+            slide_content += String.build (IMAGE_ITEM, style);
             break;
         }
       }
 
-      let style = String.build (SLIDE_STYLE, slide["background-color"]);
+      let background_pattern = slide["background-pattern"];
+      if (background_pattern !== "") {
+        let pattern = background_pattern.split ("/");
+        background_pattern = "url(https://raw.githubusercontent.com/Philip-Scott/Spice-up/master/data/assets/patterns/" + pattern[pattern.length - 1] + ")";
+      } else {
+        background_pattern = "none";
+      }
+
+      let style = String.build (SLIDE_STYLE, slide["background-color"], background_pattern);
       content += String.build (SLIDE, slide_content, style);
+
+      $('#body').html (String.build (SLIDES, content));
+      $('link[rel=stylesheet][href~="assets/css/main.css"]').remove();
     }
-
-    $('#body').html (String.build (_window, content));
-
-    //var $box = $('#content');
-    //$box.tinycarousel();
   }
 
-  // when the file is read it triggers the onload event above.
   reader.readAsText(file);
 }
 
-// handle input changes
 $('#the-file-input').change(function() {
     console.log(this.files)
-    // grab the first image in the FileList object and pass it to the function
     renderSlides (this.files[0])
 });

@@ -1,9 +1,10 @@
 .slides {
-  background-color: black;
+  background-color: #363B3E;
 }
 
-body {
+html, body {
   overflow-x: hidden;
+  background-color: #363B3E;
 }
 
 .slide {
@@ -17,6 +18,8 @@ body {
   margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
+  border: solid 1px #0E0F10;
+  border-radius: 12px;
 }
 
 .canvas-item {
