@@ -2,20 +2,37 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="assets/spice-up.css">
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script type="text/javascript" src="assets/libphilip.js"></script>
-  <title>Spice-Up - Web</title>
+  <title>Spice-Up - WebViewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/viewer/spice-up.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/viewer/libphilip.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
-
 <body id="body">
-  <div>
-    <input id="the-file-input" type="file">
+ <div class="main">
+  <div class="title">
+    <h1>Create Beautiful presentations</h1><br>
+    <h2><b>Spice-Up</b>Web Viewer</h2>
+    <input class="inputfile" id="the-file-input" type="file"/>
+    <label class="input-file-button" for="the-file-input"><i class="fa fa-folder-open" aria-hidden="true"></i>
+Open a Presentation</label>
+  </div>
+  <div class="showcase">
+    <span class="avalible">
+      <h3>Avalible for elementary os</h3>
+      <div class="buttons">
+          <a class="button-link" href="https://appcenter.elementary.io/com.github.philip-scott.spice-up">
+            <img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter">
+          </a>
+          <span class="button button-link"><a href="https://github.com/Philip-Scott/spice-up"><i class="fa fa-github"></i> Github</a></span>
+      </div>
+    </span>
+    <img class="screenshot" src="images/Screenshot.png" alt="Spice-Up">
+  </div>
   </div>
 </body>
 </html>
 
-<script type="text/javascript" src="assets/main.js"></script>
+<script type="text/javascript" src="assets/viewer/main.js"></script>

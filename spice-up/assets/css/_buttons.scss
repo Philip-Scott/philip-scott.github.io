@@ -1,0 +1,79 @@
+@import 'variables';
+
+%button-main {
+  border: none;
+	color: white;
+	text-align: center;
+  display: inline-block;
+	text-decoration: none;
+  border-radius: 3px;
+}
+
+.button-link {
+  margin-right: 24px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+.input-file-button {
+  @extend %button-main;
+  font-family: 'Open Sans';
+  color: black;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+  background-color: whitesmoke;
+  text-decoration: none;
+  margin-top: 48px;
+  padding: .4em 1em .4em .4em;
+  z-index: 1;
+  font-size: 1.6em;
+}
+
+.button {
+    z-index: 1;
+    font-size: 1.6em;
+
+    :hover {
+	    background-color: lightgray; /* Green */
+
+    }
+
+    a {
+        @extend %button-main;
+        color: black;
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+        background-color: whitesmoke;
+        text-decoration: none;
+        padding: .4em 1em .4em .4em;
+    }
+}
+
+
+.contact-button {
+
+    margin-top: 1em;
+
+    a {
+        @extend %button-main;
+        font-size: .7em;
+        margin: 1em;
+        padding: .5em 1em;
+        display: inline;
+        background-color: orange;
+        box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    :hover {
+	     background-color: #ffbb6b;
+    }
+}

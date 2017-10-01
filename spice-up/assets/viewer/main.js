@@ -51,6 +51,8 @@ function get (id) {
 }
 
 function renderSlides (file) {
+  $('link[rel=stylesheet][href~="assets/css/main.css"]').remove();
+
   // generate a new FileReader object
   reader = new FileReader();
 
@@ -101,4 +103,24 @@ $('#the-file-input').change(function() {
     console.log(this.files)
     // grab the first image in the FileList object and pass it to the function
     renderSlides (this.files[0])
+});
+
+
+var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input ) {
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
+
+	input.addEventListener( 'change', function( e ) {
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
 });
