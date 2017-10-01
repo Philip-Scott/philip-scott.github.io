@@ -13,6 +13,12 @@
   margin-right: 24px;
 }
 
+.appcenter {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
 .inputfile {
 	width: 0.1px;
 	height: 0.1px;
