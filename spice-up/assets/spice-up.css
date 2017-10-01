@@ -1,0 +1,23 @@
+.slides {
+  background-color: black;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.slide {
+  min-width: 1920px;
+  max-width: 1920px;
+  min-height: 1080px;
+  max-height: 1080px;
+  background-color: lightgray;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-item {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+}

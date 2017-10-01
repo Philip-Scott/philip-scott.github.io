@@ -1,0 +1,73 @@
+{
+	"personas": [{
+			"nombre": "Felipe",
+			"apellido": "Escoto Aceves",
+			"edad": "21",
+			"ciudad": "Guadalajara",
+			"email": "felipe@email.com"
+		},
+		{
+			"nombre": "Fernando",
+			"apellido": "Villanueva",
+			"edad": "21<br>",
+			"ciudad": "b",
+			"email": "b@b"
+		},
+		{
+			"nombre": "Lalo",
+			"apellido": "Alvarez",
+			"edad": "22",
+			"ciudad": "c",
+			"email": "c@c"
+		},
+		{
+			"nombre": "Felipe",
+			"apellido": "Bojorquez",
+			"edad": "24",
+			"ciudad": "d",
+			"email": "d@d"
+		},
+		{
+			"nombre": "Carmen",
+			"apellido": "Rivera",
+			"edad": "25",
+			"ciudad": "e",
+			"email": "e@e"
+		},
+		{
+			"nombre": "F",
+			"apellido": "FF",
+			"edad": "6",
+			"ciudad": "f",
+			"email": "f@f"
+		},
+		{
+			"nombre": "G",
+			"apellido": "GG",
+			"edad": "7",
+			"ciudad": "g",
+			"email": "g@g"
+		},
+		{
+			"nombre": "H",
+			"apellido": "HH",
+			"edad": "8",
+			"ciudad": "h",
+			"email": "h@h"
+		},
+		{
+			"nombre": "I",
+			"apellido": "II",
+			"edad": "9",
+			"ciudad": "i",
+			"email": "i@i"
+		},
+		{
+			"nombre": "J",
+			"apellido": "JJ",
+			"edad": "10",
+			"ciudad": "j",
+			"email": "j@j"
+		}
+	]
+}
