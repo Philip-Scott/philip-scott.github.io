@@ -1,69 +1,141 @@
-<!DOCTYPE HTML>
-
-
-
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Felipe Escoto</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="/assets/js/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript" src="/assets/js/carrusel.js"></script>
-    <link rel="stylesheet" href="/assets/css/animate.css">
+    <link rel="stylesheet" href="/assets/css/animate.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-</head>
-<body>
-    <header class="paralax" id="sidebar">
-        <img class="avatar" src="images/profile.jpg"/><div>
-        <b>I am Felipe Escoto</b>
-        </div><div>a
-        <ul id="carousel">
-            <li class="carouselI">Software Engineer</li>
-            <li class="carouselI">App Developer</li>
-            <li class="carouselI">Student</li>
-        </ul></div>
-        <script>
-            $(document).ready(function() {
-                $('#carousel').carousel("carousel");
-            });
-        </script>
-    </header>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="header">
 
-    <div id="main">
-        <!-- Who am i -->
-        <section id="who">
-            <h1> About me </h1>
-            <p> Hello! My name is Felipe Escoto, I am a 21 year old Software Engineer student, developer and Linux lover. This website mainly serves as a portfolio of the Open Source projects I’ve contributed to, or the ones I've created myself.</p>
-        </section>
-
-        <!-- My projects -->
-        <section id="projects">
-            <h2> Projects I've Worked On:</h2>
-
-            <div class="item">
-                <a href="https://elementary.io">
-                    <img src="images/elementary.png"/></a>
-                <span class="caption"> elementary OS: Desktop Developer</span>
-            </div>
-
-            <div class="item">
-                <a href="https://github.com/Philip-Scott/Notes-up">
-                    <img src="https://raw.githubusercontent.com/Philip-Scott/Notes-up/c98b2e911dd9bfe424bd66f83ceecf088f46f2df/Screenshot.png"/></a>
-                <span class="caption">Notes-up - Markdown notes editor</span>
-            </div>
-
-           <div class="item">
-                <a href="http://philip-scott.github.io/spice-up/">
-                    <img src="images/Spice-up.png"/></a>
-                <span class="caption">Spice-up - Create beautiful presentations</span>
-            </div>
-
-            <div class="item">
-                <a href="https://github.com/elementary-tweaks/elementary-tweaks">
-                    <img src="images/preferences-desktop-tweaks.svg"/> </a>
-                <span class="caption"> elementary tweaks</span>
-            </div>
-        </section>
+      </div>
+      <!-- Projects Section -->
+      <div class="grid-item-1">
+        <h2>Projects</h2>
+        <div class="projects-container flexbox">
+          <span class="project">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <h4>Notes-Up</h4>
+              <p>Markdown Notes Manager</p>
+            </span>
+          </span>
+          <span class="project">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.lights-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <h4>Lights-Up</h4>
+              <p>Philips Hue™ Controller</p>
+            </span>
+          </span>
+          <span class="project">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.spice-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <h4>Spice-Up</h4>
+              <p>Presentation Software</p>
+            </span>
+          </span>
+          <span class="project">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <h4>elementary OS</h4>
+              <p>Desktop Developer</p>
+            </span>
+          </span>
+        </div>
+      </div>
+      <!-- Skills Block -->
+      <div class="grid-item-2">
+        <h2>Skills To Pay The Bills</h2>
+        <div class="skills-container flexbox">
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>Vala</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>HTML</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>CSS</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>JavaScript</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>Docker</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>Azure Clound</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>AWS Cloud</p>
+            </span>
+          </span>
+          <span class="skill">
+            <img class="image"
+              src="/assets/icons/com.github.philip-scott.notes-up.svg"
+              alt=""
+            >
+            <span class="text">
+              <p>DevOps</p>
+            </span>
+          </span>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
